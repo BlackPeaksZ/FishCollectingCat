@@ -131,13 +131,13 @@ while running:
 
     # Движение кота и фона
     if keys[pygame.K_RIGHT]:
-        if player_x < 400:  # Игрок движется в пределах левой части экрана
+        if player_x < 400: #движение слева
             player_x += player_speed
         else:  # Двигаем фон, игрок остается на месте
             bg_x -= bg_speed
             bg2_x -= bg_speed
     elif keys[pygame.K_LEFT]:
-        if player_x > 100:  # Игрок движется в пределах правой части экрана
+        if player_x > 100: #движение справа
             player_x -= player_speed
         else:  # Двигаем фон
             bg_x += bg_speed
@@ -189,7 +189,7 @@ while running:
             carrying_fish = False
             score += 1
             show_score_animation = True
-            score_animation_timer = 60  # 1 секунда при 60 FPS
+            score_animation_timer = 60 
 
     if show_score_animation:
         plus_text = big_font.render("+1", True, (255, 215, 0))
